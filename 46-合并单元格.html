@@ -1,0 +1,116 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-11 15:33:08
+ * @LastEditTime: 2021-09-11 16:24:09
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\46-合并单元格.html
+
+
+合并单元格
+场景：将水平或者垂直多个单元格合并成一个单元格
+
+左上原则  合并后只保留左上单元格
+
+步骤：
+    1.明确合并那几个单元格
+    2.通过左上原则，确定保留谁删除谁
+       上下合并  只保留上面的    删除其他
+       左右合并  只保留左边的    删除其他
+
+跨行合并  rowspan  
+跨列合并  colspan
+
+注意：
+    1.只有同一个结构标签中的单元格才能合并，
+    不能跨结构标签合并
+    2.
+
+
+属性名      属性值             说明
+rowspan     合并单元格的个数   跨行合并，将多行的单元格垂直合并
+colspan     合并单元格的个数   跨列合并，将多行的单元格水平合并
+
+
+-->
+<html>
+    <head>
+        <title>aaaa</title>
+    </head>
+    <body>
+          <!-- 表格整体 -->
+          <table border="5"  height="500" width="500" >
+            <!-- 表格头部 -->
+            <thead>
+
+                <tr>
+                    <td>姓名</td>
+                    <td>性别</td>
+                    <td>年纪</td>
+                    <td>身高</td>
+                </tr>
+
+            </thead>
+            <!-- 表格主体 -->
+            <tbody>
+                <tr>
+                    <td>小红</td>
+                    <td>女</td>
+                    <td>12</td>
+                    <td>156</td>
+                </tr>
+                <tr>
+                    <td>小亮</td>
+                    <!-- 保留 -->
+                    <!--rowspan="2" 向下延伸两个  -->
+                    <td rowspan="2">男</td>
+                    <td>13</td>
+                    <td>146</td>
+                </tr>
+                <tr>
+                    <td>小绿</td>
+                   <!-- 删除 -->
+                    <!-- <td>男</td> -->
+                    <td>46</td>
+                    <td>154</td>
+                </tr>
+
+            </tbody>
+            <!-- 表格底部 -->
+            <tfoot>
+                <tr>
+                    <td>大红</td>
+                    <td>55</td>
+                    <!-- 保留 -->
+                    <td colspan="2">555</td>
+                    <!-- 删除 -->
+                    <!-- <td>5555</td> -->
+                </tr>
+
+
+            </tfoot>
+
+
+
+        </table>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

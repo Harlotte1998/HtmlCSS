@@ -1,0 +1,38 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-11 16:37:00
+ * @LastEditTime: 2021-09-11 20:13:26
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\50-15-（拓展）value属性和name属性介绍.html
+
+value属性：用户输入的内容，提交过后会发送给后端服务器
+name属性 ：当前控件的意义，提交以后可以告诉后端发送过去的数据什么意义
+后端接收到数据的格式是：name的属性值=value的属性值
+
+
+value 属性规定 <input> 元素的值。
+
+value 属性对于不同 input 类型，用法也不同：
+
+对于 "button"、"reset"、"submit" 类型 - 定义按钮上的文本
+对于 "text"、"password"、"hidden" 类型 - 定义输入字段的初始（默认）值
+对于 "checkbox"、"radio"、"image" 类型 - 定义与 input 元素相关的值，当提交表单时该值会发送到表单的 action URL。
+注意：value 属性对于 <input type="checkbox"> 和 <input type="radio"> 是必需的。
+
+注意：value 属性不适用于 <input type="file">。
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  value="定义输入字段的初始（默认）值">
+
+</body>
+</html>

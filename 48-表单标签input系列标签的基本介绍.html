@@ -1,0 +1,105 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-11 16:30:07
+ * @LastEditTime: 2021-09-12 11:17:14
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\48-input系列标签的基本介绍.html
+
+
+
+1.input系列标签
+2.button按钮标签
+3.select下拉菜单标签
+4.textarea标签
+5.label标签
+
+
+场景：在网页中显示收集用户信息的表单效果 
+         如：登录页 注册页
+
+标签名： input
+type属性值：
+
+标签名      type属性         说明
+input       text            文本框  用于输入单行文本
+input       password        密码框  用于输入密码
+input       radio           单选框  用于多选一
+input       checkbox        多选框  用于多选多
+input       file            文件选择用于上传文件
+input       submit          提交按钮用于提交
+input       reset           重置按钮用于重置
+input       button          普通按钮，默认无功能，之后配合JS添加效果
+input          date            日期选择
+
+如果需要实现以上按钮功能，需要配合form标签使用
+from使用方法：用form标签把表单一起包裹起来即可
+
+常用属性
+属性名             说 明
+
+multiple            多文件选择
+
+checked             默认选中
+
+
+placeholder         占位符，提示用户输入内容的文本
+
+value属性：用户输入的内容，提交过后会发送给后端服务器
+name属性 ：当前控件的意义，提交以后可以告诉后端发送过去的数据什么意义
+后端接收到数据的格式是：name的属性值=value的属性值
+
+
+value 属性规定 <input> 元素的值。
+
+value 属性对于不同 input 类型，用法也不同：
+
+对于 "button"、"reset"、"submit" 类型 - 定义按钮上的文本
+对于 "text"、"password"、"hidden" 类型 - 定义输入字段的初始（默认）值
+对于 "checkbox"、"radio"、"image" 类型 - 定义与 input 元素相关的值，当提交表单时该值会发送到表单的 action URL。
+注意：value 属性对于 <input type="checkbox"> 和 <input type="radio"> 是必需的。
+
+注意：value 属性不适用于 <input type="file">。
+
+-->
+
+
+<html>
+    <head>
+        <title>aaaaa</title>
+    </head>
+    <body>
+
+        <form action="">
+
+        姓名：<input type="text">  <br>
+        密码：<input type="password"><br>
+        性别  <input type="radio">男<input type="radio">女<br>
+        爱好  抽烟<input type="checkbox">喝酒<input type="checkbox">烫头<input type="checkbox"><br>
+        选择文件<input type="file"><br>
+        <input type="submit" >
+        <input type="reset" >
+        <input type="button" value="普通按钮" >
+        </form>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
