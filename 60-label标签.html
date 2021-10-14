@@ -1,0 +1,65 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-11 21:06:30
+ * @LastEditTime: 2021-09-12 08:56:38
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\60-label标签.html
+
+label标签：
+场景：常用于绑定内容与表单标签的关系
+
+使用方法：1.
+    1.使用label标签把内容（如文本）包裹起来
+    2.在表单标签上添加ID属性
+    3.在label标签的for属性中设置对应的id属性值
+
+使用方法：2.
+    1.直接使用lable标签把内容（如文本）和表单标签一起包裹起来
+    2.需要把lable标签的for属性删除掉即可
+
+
+ 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>此时只能点击小框才能选中，点击文字没用</p>
+    <P>十分不方便</P>
+    <input type="checkbox" name="" id="">喝酒 
+    <input type="checkbox" name="" id="">抽烟 
+    <input type="checkbox" name="" id="">烫头 
+    <input type="checkbox" name="" id="">打架 
+    <hr>
+    <p>借助lable实现绑定文字效果</p>
+    <p>即点击文字也可以实现选中多选框</p>
+    <p>第一种方法</p>
+    <input type="checkbox" name="" id="one"> <label for="one">敲代码</label>
+    <!-- input标签的id属性和lable的for属性设置同一个值 -->
+
+    <p>第二个方式</p>
+    <label>  <input type="checkbox" > 玩游戏</label>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
