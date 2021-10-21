@@ -1,0 +1,64 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-12 12:09:12
+ * @LastEditTime: 2021-09-12 12:27:57
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\CSS\03-CSS引入方式.html
+
+
+
+内嵌式
+
+外联式   多个页面  项目中常用
+
+行内式
+
+
+
+
+内嵌式    CSS写在Style标签中
+    提示：style标签虽然可以写在页面的任意位置，
+          但是通常写在head标签中
+
+外联式    CSS写在一个单独的 .css文件中
+    提示：需要使用link标签在网页中引入
+
+行内式    CSS写在标签的style属性中
+    提示：基础班不推荐使用，之后会配合Js使用
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        内嵌式
+
+        <style>
+
+        p{
+            color: darkblue;
+
+
+        }
+    </style> -->
+
+    <!-- 外联式 -->
+    <link rel="stylesheet" href="./css/03.css">
+</head>
+<body>
+
+
+
+
+    <p>这是一个p标签</p>
+    <p>这也是一个p标签</p>
+
+
+    <!-- 行内式 -->
+    <h1 style="color: darkorange;" >行内式</h1>
+
+</body>
+</html>
