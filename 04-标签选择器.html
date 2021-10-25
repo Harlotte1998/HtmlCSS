@@ -1,0 +1,61 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-12 12:29:20
+ * @LastEditTime: 2021-09-12 13:49:09
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\CSS\04-标签选择器.html
+
+基础选择器
+
+1.标签选择器
+2.类选择器
+3.id选择器
+4.通配符选择器
+
+
+1.标签选择器
+
+结构：   标签名{ css属性名: 属性值;}
+作用：   通过标签名，找到页面中所有这类标签，设置样式
+注意点： 
+        1.标签选择器选择的是一类标签，而不是单独的一个
+        2.标签选择器无论嵌套的关系有多深，
+          都能找到对应的标签
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+
+        p{
+            color: darkorchid;
+        }
+
+        div{
+            color: orange;
+
+
+        }
+        
+    </style>
+</head>
+<body>
+    <p>这是一个标签</p>
+    <p>这也是一个标签</p>
+    <div>这是一个DIV</div>
+    <div>这也是一个DIV</div>
+
+    
+
+</body>
+</html>
+
