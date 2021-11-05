@@ -1,0 +1,39 @@
+<!-- 
+    
+场景:在网页中显示图片
+代码: <img src="" alt="" title=""  >
+特点:
+  1.单标签
+  2.img标签需要展示对应的效果，需要借助标签的属性进行设置
+
+属性
+  1.src 
+    图片的路径值
+  2.alt 
+    替换文本 当图片加载失败 显示的文本
+  3.title
+    提示文本
+    当鼠标悬停在图片上面时，才显示的文本
+    title属性不仅仅可以用于图片标签，还可以用于其他标签    
+ 4.width
+   宽度
+ 5.height
+   高度
+    注意点
+    1.如果只设置width或者是height，
+      另一个没设置的属性会等比例缩放(此时图片不会变形)
+    2.如果设置了height和width两个，
+      若设置不合比例，图片会变形。
+
+-->
+
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <img src="images/2.png" alt="加载失败后显示" >
+        <img src="images/2.png" title="鼠标悬停后显示">
+        <img src="images/2.png" width="100" height="100" >
+    </body>
+</html>
