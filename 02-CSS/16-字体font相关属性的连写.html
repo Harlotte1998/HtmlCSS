@@ -1,0 +1,66 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-13 12:01:49
+ * @LastEditTime: 2021-09-13 12:28:12
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\16-字体font相关属性的连写.html
+
+16-字体font相关属性的连写
+
+属性名：font
+取值：
+    font:style weight size family;
+顺序要求:
+    swsf（稍微舒服）
+        连写  存在顺序要求 style weight size  family 
+
+省略要求：
+    只能省略前两个，如果省略了相当于设置了默认值
+
+注意点：
+    要么把单独的样式写在连写的下面   不能把单独属性写在上面   会被下面的连写默认属性覆盖掉
+     
+    要么把单独的样式写在连写的里面
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+
+        .a{
+
+            /* 字体大小 */
+            font-size: 50px;
+            /* 字体粗细 */
+            font-weight: 800;
+            /* 字体样式 */
+            font-style: italic;
+            /* 字体系列 */
+            font-family: 楷体,隶书，宋体， sans-serif  ;
+        }
+
+            /* 连写  存在顺序要求 */
+            /* style weight size  family */
+        .b{
+           font: italic 700 30px    楷体,隶书，宋体， sans-serif ;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <p  class="a">AAAAAAAAAA</p>
+
+    <p  class="b">BBBBBBBBBBBB</p>
+</body>
+</html>

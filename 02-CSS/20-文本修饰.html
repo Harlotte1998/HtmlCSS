@@ -1,0 +1,75 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-13 12:54:36
+ * @LastEditTime: 2021-09-13 13:08:48
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\20-文本修饰.html
+
+文本修饰
+
+text-decoration:属性值;
+
+    属性值          效果
+    underline      下划线     常用
+    line-through   删除线     不常用
+    overline       上划线     几乎不用
+    none           无装饰线
+
+开发中会使用  text-decoration:  none;  清除a标签默认的下划线  
+  
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .a{
+            text-decoration: underline;
+
+        }
+
+        .b{
+            text-decoration: line-through;
+
+        }
+
+        .c{
+            text-decoration: overline;
+
+        }
+
+
+        .a1{
+
+
+        }
+
+        .a2{
+
+            text-decoration:  none;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="a">AAAAAAAA</div>
+
+    <hr>
+    
+    <div class="b">AAAAAAAA</div>
+    
+    <hr>
+    
+    <div class="c">AAAAAAAA</div>
+    <a href="#" class="a1">不做处理</a>  <br>
+    <a href="#" class="a2">去除下划线</a>
+
+</body>
+</html>
