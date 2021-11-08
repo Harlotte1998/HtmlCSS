@@ -1,0 +1,63 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-12 13:50:08
+ * @LastEditTime: 2021-09-12 14:03:58
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\CSS\05-类选择器.html
+
+类选择器
+结构：  .类名 {  css属性名:  属性值; }
+作用:  通过类名，找到页面中所有带有类名的标签，设置样式
+注意点：
+
+    1.所有标签都有class属性，class属性的属性值称为类名
+    2.类名可以由数字，字母，下划线，中划线组成，
+      但不能以数字或者中划线开头
+    3.一个标签可以同时有多个类名，类名之间以空格隔开
+    4.类名可以重复，一个类选择器可以同时选中多个标签
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .red{
+            color: red;
+        }
+
+        .yellow{
+            color: yellow;
+        }
+
+        .pink{
+            color: pink;
+
+        }
+
+        .big{
+            font-size: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- 一个标签可以同时有多个类名，类名之间以空格隔开 -->
+    <p class="red  big " >小红</p>
+    
+    <p class="yellow" >小黄</p>
+    <p class="pink" >小蓝</p>
+    <!-- 类名可以重复，一个类选择器可以同时选中多个标签 -->
+    <p class="red" >我也要变红</p>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-12 14:57:26
+ * @LastEditTime: 2021-09-12 15:04:29
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\02-CSS\08-通配符选择器.html
+
+通配符选择器
+
+结构：  *{css属性名: 属性值;}
+作用：  找到页面中所有的标签，设置样式
+注意点：
+
+        开发中使用极少，只会在极特殊的情况下才会用到
+        可能会用于去除标签默认的margin和padding
+
+        *{
+            margin:0;
+            padding:0;
+        }
+
+
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 让所有的字变成黄色 -->
+    <p>asdasdasf</p>
+    <div>sdfsdfsd</div>
+    <span>djsfsdf</span>
+    <h1>sdfghjkl</h1>
+
+</body>
+</html>
+
+
