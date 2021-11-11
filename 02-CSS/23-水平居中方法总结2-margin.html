@@ -1,0 +1,67 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-14 12:15:48
+ * @LastEditTime: 2021-09-14 12:34:17
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\23-水平居中方法总结2-margin.html
+
+23-水平居中方法总结2-margin
+
+让大盒子 div p  h  水平居中，可以用margin: 0 auto;
+
+注意点：
+    1.如果需要让 div p  h 水平居中，
+      直接给当前元素设置即可
+    2.margin: 0 auto; 一般针对于固定宽度的盒子，
+      如果  大盒子  h  div  p  没有设置宽度，
+      此时就会默认占满父元素的宽度 
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+
+      
+
+        .father{
+            width: 500px;
+            height: 500px;
+            background-color: chartreuse;
+            /* 直接给当前元素设置 */
+            margin:  0 auto;
+
+        }
+
+        .son{
+            width: 150px;
+            height: 150px;
+            background-color: darkblue;
+            margin:  0 auto;
+            /* 直接给当前元素设置 */
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+
+
+
+        </div>
+    </div>
+</body>
+</html>
+

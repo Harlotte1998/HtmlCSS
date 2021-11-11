@@ -1,0 +1,53 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-14 12:55:00
+ * @LastEditTime: 2021-09-14 13:08:36
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\25-行高与font连写的注意点.html
+
+同一个标签设置
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .box{
+            width: 200px;
+            height: 400px;
+            background-color: darkgrey;
+            font-size: 20px;
+            
+            font: italic 700 20px 楷体 ;
+            /*line-height写在font下面    */
+            /* 写在font上面会被font覆盖 */
+            /* line-height: 400px; */
+
+            /*line-height写在font里面也可以      */
+            /*  */
+            font: italic 700 20px/400px 楷体 ;
+
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        
+        行高行高行高行高<br>
+        多行多行多行多行
+
+    </div>
+</body>
+</html>

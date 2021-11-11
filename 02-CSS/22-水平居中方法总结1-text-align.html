@@ -1,0 +1,90 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-13 13:10:53
+ * @LastEditTime: 2021-09-14 12:15:13
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\22-水平居中方法总结1-text-align.html
+
+让其他元素水平居中的方法
+
+22-水平居中方法总结 1-text-align
+    1.text-align    都是小盒子 
+      文本
+      span标签    a标签
+      input标签   img标签
+
+注意点：
+    如果需要让以上元素水平居中，
+      text-align:center;  需要给以上的父元素 设置
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        .box{
+            height: 500px;
+            width: 300px;
+            background-color: dodgerblue;
+
+            /* 文本居中 */
+            /* text-align: center; */
+
+            /* span居中 */
+            /* text-align: center; */
+
+            /* a标签居中 */
+            text-align: center;
+
+
+
+        }
+
+        span{
+            background-color: firebrick;
+        }
+
+
+        a{
+
+            background-color: gold;
+        }
+
+        input{
+
+
+            background-color: indigo;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+         <!-- 让文本居中 -->
+        <p>文本AAAAAAAa</p>
+
+        <!-- span居中 -->
+        <span>我是一个span</span>
+        <br>
+        <!-- a标签居中 -->
+        <a href="#">这是一个a标签</a>
+        <br>
+
+        <!-- input -->
+        <input type="text">
+
+        <!-- img -->
+        <img src="./01-Html-认知-基础/images/2.png" alt="">
+    </div>
+   
+</body>
+</html>

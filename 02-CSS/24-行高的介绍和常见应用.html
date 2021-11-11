@@ -1,0 +1,64 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-14 12:34:24
+ * @LastEditTime: 2021-09-14 13:09:42
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\24-行高的介绍和常见应用.html
+
+行高  控制行间距（给一行上下增加间距）
+属性名 line-height
+取值
+    数字+px
+    倍数（单签标签font-size的倍数）
+
+应用
+    1.让单行文本垂直居中可以设置line-height：文字父元素高度
+    2.网页精准布局时，会设置line-height:1  可以取消上下间距
+    
+    行高与font连写的注意点
+    1.如果同时设置了行高与font连写，注意覆盖问题
+    2.font:style  weight  size  /  line-height famile ;
+        注意看有一个斜杠   size  /  line-height
+
+    行高 = 上间距 + 文本高度 + 下间距  
+
+    上间距的计算方法  ( 行高-文本高度 )  /2  
+
+    不能设置多行  会出问题
+    
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 400px;
+            background-color: darkgrey;
+            font-size: 20px;
+            
+
+            /* 通过行高设置单行文本的垂直居中 */
+            line-height: 400px;
+
+
+            /* 通过行高设置单行文本的取消文本与父元素的间隙 */
+            /* line-height: 1; */
+            /* 1 代表的是 1倍  */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        
+        行高行高行高行高<br>
+        多行多行多行多行
+
+    </div>
+</body>
+</html>
