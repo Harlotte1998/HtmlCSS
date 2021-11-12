@@ -1,0 +1,54 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-15 18:07:09
+ * @LastEditTime: 2021-09-16 12:54:50
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\34-子代选择器.html
+
+子代选择器
+作用：
+    根据HTML标签的嵌套关系，
+    选择父元素  子代中 满足条件的元素
+
+选择器语法：
+    选择器1 > 选择器2 {CSS样式}
+
+结果：
+    在选择器1所找到标签的子代(儿子)中，
+    找到满足选择器2的标签，设置样式
+
+样式：
+    1. 子代只包括：儿子
+    2. 子代选择器中，选择器与选择器之间用 > 隔开
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father > p {
+            font-size: 20px ;
+            color: crimson;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="father">
+        <p>div子代中的文字，，儿子</p>
+        <div>   <!--div中的div  孙子代  -->
+           
+            <p>div孙子代中的 P标签</p>
+        </div>
+    </div>
+    <p></p>
+    
+</body>
+</html>

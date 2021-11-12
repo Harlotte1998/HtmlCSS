@@ -1,0 +1,69 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-16 12:55:30
+ * @LastEditTime: 2021-09-16 13:09:23
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\02-CSS\35-并集选择器.html
+
+
+
+并集选择器
+
+作用：同时选择多组标签，设置相同样式
+选择器语法： 选择器1 , 选择器2{CSS样式}  英文状态下的逗号
+结果：
+    找到选择器1和选择器2选中的标签，设置样式
+
+注意点：
+    1.并集选择器中的每组选择器之间通过 , 分隔
+    2.并集选择器中的每组选择器可以是基础选择器或者是复合选择器
+    3.并集选择器中的每组选择器通常一行写一个，提高代码的可读性
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+
+    /* div{
+        color: crimson;
+    }
+
+    p{
+        color: crimson;
+    } */
+
+    /* 使用并集选择器 */
+    div,
+    p,
+    .red     /* 并集选择器中的每组选择器可以是基础选择器或者是复合选择器 */
+    {
+        font-size: 20px;
+        color: crimson;
+    }
+
+
+    </style>
+</head>
+<body>
+    <!-- 需求：把div和p设置成红色  节省代码的方式 -->
+    <div>divdivdiv</div>
+    <div>DDDDIV</div>
+    <p>P标签</p>
+    <p>P标签2</p>
+    <h1 class="red">h1标签</h1>
+    <h2>h2标签</h2>
+
+
+
+    
+
+
+
+</body>
+</html>

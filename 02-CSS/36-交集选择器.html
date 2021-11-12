@@ -1,0 +1,45 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-09-16 13:10:57
+ * @LastEditTime: 2021-09-18 12:31:02
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\36-交集选择器.html
+
+ 交集选择器 紧挨着
+作用: 选中页面中 同时满足 多个选择器的标签
+选择器语法：  选择器1  选择器2 {CSS选择器}
+结果：
+    （既又原则）找到页面中 既 能被选择器1选中  又 能被选择器2选中的标签，设置样式
+注意点：
+    1.交集选择器中的选择器之间是紧挨着的，没有东西分隔
+    2.交集选择器中如果有标签选择器，标签选择器必须写在最前面
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div和p标签  类名相同 不能使用类名选择器 */
+        /* 2222PPPP和PPPPPP 都是P标签不能使用标签选择器 */
+
+
+        p.red{
+            color: darkorange;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 让222PPPP变红 -->
+    <div class="red">DIVDIV</div>
+    <p>PPPPP</p>
+    <p class="red">2222PPP</p>
+
+    <!-- div和p标签  类名相同 不能使用类名选择器 -->
+    <!-- 在相同类名不同标签类型的情况下，精准找到一个标签 -->
+    
+</body>
+</html>
