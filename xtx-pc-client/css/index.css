@@ -1,0 +1,342 @@
+/* 主页特有内容 专用 css */
+
+/* --------------网站入口  xtx-entry--------------- */
+
+.xtx-entry {
+    /* 通栏 不用设置宽度 */
+    height: 500px;
+    background-color: #fff;
+}
+
+/* 版心盒子  */
+.xtx-entry .container{
+    height: 500px;
+    background-color: pink;
+
+    /* 子绝父相 */
+    position: relative;
+}
+
+
+/* 侧边栏盒子 */
+.xtx-entry  .container .category{
+    width: 251px;
+    height: 500px;
+    /* rgba 可以控制透明度 */
+    background-color: rgba(0, 0, 0, .8);
+
+    /* 子绝父相 */
+    position: absolute;
+
+    /*  */
+    left: 0;
+    top: 0;
+}
+
+/* 版心盒子和侧边栏盒子 需要层叠在一起
+    子绝父相 */
+
+
+.xtx-entry .category a{
+    color: #fff;
+}
+
+/* 侧边栏 li标签 */
+.xtx-entry .category li{
+    /* li标签的 高度 */
+    height: 50px;
+    /* 文字垂直居中 */
+    line-height: 50px;
+    /* li标签左边距 */
+    padding-left: 36px;
+
+
+    /* 子绝父相 */
+    position: relative;
+}
+
+/* 鼠标放到li标签上面的样式 */
+.xtx-entry .category li:hover{
+    background-color: #27ba9b;
+
+}
+/* 
+li标签 第一行的文字是16px  其他文字 是 14px
+解决方法
+除了  每一行  第一个 文字    其他文字  用span标签包裹 */
+
+/* 
+<ul>
+<li><a href="#">生鲜 水果 蔬菜</a></li>
+<li><a href="#">美食 面点 干果</a></li>
+<li><a href="#">餐厨 数码产品</a></li>
+<li><a href="#">电器 床品 四件套 被枕</a></li>
+<li><a href="#">居家 奶粉 玩具 辅食</a></li>
+<li><a href="#">洗护 洗发 洗护 美妆</a></li>
+<li><a href="#">孕婴 奶粉 玩具</a></li>
+<li><a href="#">服饰 女装 男装</a></li>
+<li><a href="#">杂货 户外 图书</a></li>
+<li><a href="#">品牌 品牌制造</a></li>
+</ul> */
+
+
+.xtx-entry .category  span{
+    font-size: 14px;
+}
+
+/* 
+每个li标签 第一个文字和第二个文字之间 有15px的间距
+使用伪类选择器  选择 每一个li标签的第一个 span标签 */
+.xtx-entry .category  span:first-child{
+    margin-left: 15px;
+}
+
+/* 
+li标签最右边箭头，使用伪元素实现*/
+.xtx-entry .category a::after {
+    content: '';
+    width: 6px;
+    height: 11px;
+    background-color: pink;
+
+    /* 当前设置伪元素是行内元素 无法设置 宽和高 
+       1.使用定位 使用子绝父相
+         相对于li元素 相对移动*/
+    position: absolute;
+
+    top: 19px;
+    right: 19px;
+
+    background: url('../images/sprites.png') -80px  -110px;
+    
+}
+
+
+/* 左右按钮 */
+.xtx-entry .prev{
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0,0,0,.2);
+
+    /* a标签是行内元素
+       使用浮动解决  子绝父相
+       父是 版心盒子  相对版心盒子浮动*/
+    position: absolute;
+    top: 228px;
+    left: 260px;
+
+    /* 圆形 圆角标签 */
+    border-radius: 45px;
+
+    /* 直接给整个a标签设置背景  用来添加 左箭头 */
+    background:  rgba(0,0,0,.2)  url('../images/sprites.png') 15px -60px;
+
+    /* 此时 a 标签的颜色 被覆盖
+       解决方案
+       1.将颜色写在图片下面
+       2.连写  */
+}
+
+/* 右箭头 和 左箭头 大部分相同 直接粘贴 上面的   修改部分数据*/
+/* 左右按钮 */
+.xtx-entry .next{
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0,0,0,.2);
+
+    /* a标签是行内元素
+       使用浮动解决  子绝父相
+       父是 版心盒子  相对版心盒子浮动*/
+    position: absolute;
+    top: 228px;
+    left: 1180px;
+
+    /* 圆形 圆角标签 */
+    border-radius: 45px;
+
+    /* 直接给整个a标签设置背景  用来添加 左箭头 */
+    background:  rgba(0,0,0,.2)  url('../images/sprites.png') -22px -60px;
+
+    /* 此时 a 标签的颜色 被覆盖
+       解决方案
+       1.将颜色写在图片下面
+       2.连写  */
+}
+
+
+
+/* 轮播图指示器 */
+/* 
+    子绝父相  ol定位到下面   确定位置
+    剩下的li标签 全都浮动起来  就可以了
+    然后使用 margin  设置间距 */
+
+.xtx-entry  .indlcator  {
+    width: 110px;
+    height: 10px;
+    /* background-color: rgb(250, 1, 1); */
+
+    /*  使用子绝父相
+        子绝 */
+    position: absolute;
+
+    top: 460px;
+    left: 680px;
+}
+
+
+.xtx-entry  .indlcator li{
+    width: 10px;
+    height: 10px;
+    /* 带透明的颜色 */
+    background-color: rgba(255,255,255,.43);
+
+    /* 变为圆形 */
+    border-radius: 50%;
+
+    /* 使用浮动 来让垂直布局 变为 水平布局 */
+    float: left;
+
+    margin-right: 15px;
+    
+}
+
+/* 给最后一个li  设置margin-right: 0px;  */
+.xtx-entry  .indlcator li:last-child{
+    margin-right: 0px;
+}
+
+
+/* 使用 active类的方式 设置 选中时变颜色   */
+.xtx-entry  .indlcator li.active{
+    background-color: #fff;
+}
+
+
+
+/* ----------------新鲜好物模块    xtx-new-goods------------ */
+
+.xtx-new-goods{
+    /* 宽度是版心 */
+    /* width: ; */
+    height: 520px;
+    /* background-color: pink; */
+}
+
+/* 新鲜好物模块 头部 */
+.xtx-new-goods .goods-hd{
+    height: 115px;
+    /* background-color: blue; */
+    /* 整个hd 头部的文字都是垂直居中的 就在父元素中 统一设置*/
+    line-height: 115px;
+}
+
+/* 左侧的h2 */
+.xtx-new-goods .goods-hd h2{
+    font-size:29px ;
+    font-weight: 400;
+
+    height: 115px;
+    
+}
+
+/* 左侧h2 小文字  */
+.xtx-new-goods .goods-hd h2 span{
+    font-size: 16px;
+    color: #999;
+}
+
+/* 右侧 查看全部  */
+.xtx-new-goods .goods-hd a{
+    color: #666;
+}
+
+/* 在a标签中 添加 一个图标 */
+.xtx-new-goods .goods-hd a::after{
+    content: '';
+    width: 7px;
+    height: 13px;
+
+    background-color: orange;
+
+    /* 设置为行内块元素 */
+    display: inline-block;
+
+    margin-left: 13px;
+
+    background: url('../images/sprites.png') -0px  -110px;
+}
+
+/* 新鲜好物模块 商品模块 */
+.xtx-new-goods .goods-list{
+    height: 405px;
+    /* background-color: red; */
+}
+
+
+/* 具体商品 */
+.xtx-new-goods .goods-list li{
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+    /* 此时li 盒子是从上到下排列的  此时是 垂直布局 */
+    /* 浮动起来 */
+    float: left;
+
+    /* 盒子在左浮动时被左上浮动的盒子挡住 */
+    /* h2比hd盒子 高 4px  让h2 不要超出父元素 
+       解决方案  给h2 设置一个  高度 */
+
+    margin-right: 8px;
+    
+    /* 用来确保没有默认行间距  去除影响 */
+    line-height: 1;
+
+    /* 文字都是水平居中的 */
+    text-align: center;
+
+
+}
+
+/* 去掉最后一个 li 标签的  margin-right */
+.xtx-new-goods .goods-list li:last-child{
+    margin-right:0 ;
+}
+
+/* 调整图片大小 */
+.xtx-new-goods .goods-list li img{
+    width: 100%;
+}
+
+.xtx-new-goods .goods-list li h3{
+    margin-top: 23px;
+
+    /* 通过设置行高 来 隔离 h3 和 p 标签 */
+    line-height: 30px;
+
+    font-size: 20px;
+    font-weight: 400px;
+}
+
+/* 价格的文字样式 */
+.xtx-new-goods .goods-list li p{
+
+    color: red;
+    font-size: 23px;
+}
+
+/* 在设计图中 ¥ 符号 比数字要小一些  */
+
+.xtx-new-goods .goods-list li  span{
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+

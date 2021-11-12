@@ -1,0 +1,346 @@
+common.css  :该网站中多个网页相同模块的重复样式，如:头部，底部
+
+/* 版心公共类  */
+.container{
+    width: 1240px;
+    margin: 0 auto;
+}
+
+
+/* 快捷菜单模块 */
+.xtx-shortcut{
+    height: 52px;
+    background-color: #333;
+}
+
+
+.xtx-shortcut .container{
+    height: 52px;
+}
+
+
+
+.xtx-shortcut ul  li{
+
+
+    float: left;
+
+    line-height: 52px;
+
+    color: 666666;
+}
+
+/* 
+*/
+.xtx-shortcut ul  li a{
+    margin: 16px;
+    color: #dcdcdc;
+}
+
+.xtx-shortcut   li:last-child a{
+    margin-right: 0;
+
+
+}
+.xtx-shortcut li:last-child  a::before{
+    content: '';
+    width:11px ;
+    height:16px ;
+
+    display: inline-block;
+
+    vertical-align: middle ;
+
+
+       margin-right: 8px;
+
+       margin-top: -3px;
+
+    background: url('../images/sprites.png')  -160px  -70px  ;
+}
+
+
+
+/* --------主导航模块 xtx-main-nav   --------- */
+
+
+.xtx-main-nav{
+
+   height:130px ;
+
+   padding-top:30px ;
+    box-sizing: border-box;
+
+}
+
+.xtx-main-nav .logo{
+    height: 70px;
+    width: 207px;
+
+    margin-left: 25px;
+
+}
+  
+.xtx-main-nav .logo a{
+
+    display: block;
+    height: 70px;
+    background-image: url('../images/logo.png');
+    background-size: 100% 100%;
+
+
+    font-size: 0px;
+
+}
+
+
+
+.xtx-main-nav  nav  li{
+    float: left;
+    height: 70px;
+    line-height: 70px;
+
+    margin-right: 48px;
+
+
+    
+
+
+}
+
+.xtx-main-nav  nav{
+    margin-left: 40px;
+}
+
+/* 主导航  a标签导航模块 */
+.xtx-main-nav  nav  a:hover{
+    color: #27ba9b;
+
+    /* 设置下边框 */
+    border-bottom: 1px  solid  #27ba9b ;
+    /* 下边框默认与文字紧挨一起*/
+    /* 要求下边框与文字有距离 */
+    padding-bottom: 7px;
+
+}
+
+
+/*  */
+.xtx-main-nav .search{
+    width: 172px;
+    height: 30px;
+    background-color: orange;
+    
+    
+    /* 标签过于靠上 */
+    margin-top: 24px;
+
+    /* 设置左边距 */
+    margin-left: 34px;
+
+    /* 子绝父相  */
+    position: relative;
+}
+
+.xtx-main-nav .search input{
+    width: 172px;
+    height: 30px;
+
+    /* 设置搜索框的下边框 */
+    border-bottom: 2px solid  #e7e7e7;
+
+    /* 设置搜索框内的文字 左边距 */
+    padding-left: 31px;
+
+    /* 在搜索框内添加一个小图标
+       1. 添加一个伪元素
+       2. 将图片设置成背景 */
+
+    
+}
+    /* 给 search设置伪元素
+      伪元素需要在元素内部生成 包裹内容
+      input标签是单标签 */
+.xtx-main-nav .search::before{
+    content: '';
+    width: 18px;
+    height: 18px;
+    /* background-color: red; */
+    /* 伪元素默认为行内元素  不能设置宽高  设置的宽高失效 */
+    /* 方案1.转换为行内块元素  */
+    /* 方案2.图标与input不是在一层的 是并列显示的
+       使用层叠解决问题
+       子绝父相 */
+
+    position: absolute;
+    top: 5px;
+    left: 2px;
+
+    background: url('../images/sprites.png')  -80px -70px;
+
+
+}
+
+/* 购物车模块 */
+.xtx-main-nav .cart{
+    height: 23px;
+    width: 23px;
+    /* background-color: red; */
+
+    margin-top: 28px;
+    margin-left: 15px;
+    
+    /* 精灵图 */
+    background: url('../images/sprites.png') -120px  -70px;
+
+    position: relative;
+}
+
+/* 购物车右上角的气泡 */
+.xtx-main-nav .cart span{
+    width: 20px;
+    height: 15px;
+    background-color: red;
+    /* span是行内元素 不能直接设置宽高  */
+    /* 设置子绝父相 */
+    position: absolute;
+
+    /* 方块偏移  */
+    top: -5px;
+    right: -12px;
+
+    /* 方块圆角 */
+    border-radius: 8px;
+
+    /* 文字颜色 字体大小 */
+    font-size: 13px ;
+    color: #fff;
+
+    /* 文字 水平  垂直居中 */
+    text-align:  center;
+    line-height: 15px;
+
+}
+
+/* ---------------2.宣传服务      xtx-service---------------- */
+/* 宣传服务大盒子 */
+.xtx-service{
+    height: 174px;
+    background-color: #333;
+}
+
+/* 版心盒子 */
+.xtx-service .container{
+    /* 因为是版心盒子 引入了版心样式 所以 宽度不用设置 */
+    height: 173px;
+    /* 在宣传服务模块下面有一个横线
+       这个横线不是通栏 所以把这个横线  当做  版心盒子的下边框  而不是  
+       宣传服务大盒子的下边框  */
+
+    /* background: rgb(77, 128, 240); */
+    
+    border-bottom: 1px  solid  #434343;
+
+
+    /* 通过设计图可以看出 下面的横线比版心盒子要宽
+       如果想要完全还原这个样式 
+       可以重新设置版心盒子宽度  
+       让版心盒子变宽
+       单独设置宽度 */
+    width: 1393px;
+
+}
+
+/* 三个a标签  大小相同  内容样式相同 */
+/* a标签中的小图标 和文字内容  加起来 一起  水平 垂直居中 */
+.xtx-service .container a{
+    /* 宽度三等分 */
+    width: 33.33%;
+    height: 173px;
+    /* background-color: rgb(223, 85, 85); */
+
+    /* 此时设置的宽高并不生效 而且不能一行中显示多个
+       让他们全都浮动起来   全都浮动起来就全部脱标了 */
+    
+       float: left;
+
+       /* 文字  水平  垂直 居中 */
+       line-height: 173px;
+       text-align: center;
+       font-size: 28px;
+       color: #fff;
+    
+}
+
+/* a标签中的 小图标 */
+.xtx-service .container a::before{
+    content: '';
+    width: 58px;
+    height:58px;
+    /* background-color: rgb(32, 23, 23); */
+    /* 此时设置了宽高 但是  不能显示
+       因为 伪元素是 行内元素  不能直接设置宽高
+       图标和文字 一起水平 垂直居中   所以 需要受 text-align: center;
+       font-size: 28px; 控制    这两个属性能控制  行内块元素   行内元素
+       行内块元素  能设置  宽和高  还能受上面两个两个属性的控制 
+       所以 直接使用  行内块元素 完成 */
+    display: inline-block;
+
+    /* 行内块元素和文字的对齐  受基线对齐影响  */
+    /* 设置垂直对齐方式 */
+    vertical-align: middle;
+
+    /* 图标与文字之间有间距 */
+    margin-right: 19px;
+
+    /* 将辅助颜色换成图片 */
+    background: url('../images/sprites.png') 0px 0px;
+}
+
+
+/* 找到 第二个 a 标签  中的伪元素  */
+.xtx-service a:nth-child(2)::before {
+    background-position: -130px 0 ;
+}
+
+/* 找到 第三个 a 标签  中的伪元素  */
+.xtx-service a:nth-child(3)::before {
+    background-position: -65px 0 ;
+}
+
+/* ----------版权信息模块   .xtx-copyright----------- */
+/* -版权信息模块 通栏 */
+.xtx-copyright {
+    height: 168px;
+    background-color: #333;
+
+}
+
+/* 版心盒子 */
+.xtx-copyright .container{
+    height: 168px;
+
+/* a 标签 水平居中 给所在的父元素 这个类 设置*/
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+
+
+/* 此时盒子被撑大了 设置自动内减 */
+    box-sizing: border-box;
+
+
+}
+
+/* 给a标签设置颜色   需要直接找到  然后设置 */
+.xtx-copyright .container a{
+    color: #999;
+}
+
+
+/* 给两个p标签设置上下的间距 */
+
+.xtx-copyright .container p:first-child{
+    line-height: 35px;
+
+}
