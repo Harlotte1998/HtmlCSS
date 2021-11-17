@@ -1,0 +1,42 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-10-13 13:34:44
+ * @LastEditTime: 2021-10-13 13:45:58
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\03-项目构建\05-background连写拓展.html
+
+2.3 background连写拓展
+        ➢完整连写: background: color image repeat position/size;
+        ➢注意点:background-size和background连写同时设置时， 
+                需要注意覆盖问题
+        ➢解决:
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            height: 400px;
+            /* 边框 1px粗  实线  黑色 */
+            border: 1px solid  #000;
+
+
+            /* 在盒子正中间放一个图片 */
+            background: url('./images/1.jpg') no-repeat 
+            center center ;
+
+            /* 该变图片大小 */
+            background-size: 300px  300px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

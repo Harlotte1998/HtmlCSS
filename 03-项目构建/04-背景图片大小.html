@@ -1,0 +1,66 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-10-13 13:18:33
+ * @LastEditTime: 2021-10-13 13:31:34
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \VSCodeWorkSpace\03-项目构建\04-背景图片大小.html
+
+2.1背景图片大小
+    ➢作用:设置背景图片的大小，
+    ➢语法: background-size: 宽度高度;
+    ➢取值:
+
+    取值                场景
+    数字+px         简单方便，常用
+    百分比          相对于当前盒子自身的宽高百分比
+    contain         包含，将背景图片等比例缩放，直到不会超出盒子的最大
+    cover           覆盖，将背景图片等比例缩放，直到刚好填满整个盒子没有空白
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            height: 300px;
+            border: 1px  solid #000;
+            margin: 100px auto;
+            background: url(./images/1.jpg) no-repeat;
+
+        }
+
+        div:nth-child(2){
+            background-size: 400px 300px;
+        }
+
+
+        div:nth-child(3){
+            background-size: 100%  100%;
+        }
+
+
+        /* contain 包含，将背景图片等比例缩放，直到不会超出盒子的最大 */
+        /* 图片比例和盒子比例不同的话  盒子留有空白  图片不会拉伸变形 */
+        div:nth-child(4){
+            background-size: contain;
+        }
+
+
+        div:nth-child(5){
+            background-size: cover;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div></div>    
+    <div></div>    
+    <div></div>    
+    <div></div>    
+    <div></div>    
+</body>
+</html>
